@@ -7,17 +7,34 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
-
-@end
+#import "FeedTableViewController.h"
+#import "Constants.h"
 
 @implementation AppDelegate
+
+@synthesize navigationController;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self openInitialScreen];
+    
     return YES;
+}
+
+-(void)openInitialScreen {
+    
+    FeedTableViewController* feedTableViewController = [[FeedTableViewController alloc] initWithNibName:@"FeedTableViewController" bundle:nil];
+    
+    navigationController = [[UINavigationController alloc] initWithRootViewController:feedTableViewController];
+    
+    //[[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x1475a8)];
+    
+    [self.window setRootViewController:navigationController];
+    [self.window makeKeyAndVisible];
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
