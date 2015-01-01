@@ -7,6 +7,7 @@
 //
 
 #import "FeedTableViewController.h"
+#import "SearchViewController.h"
 #import "Constants.h"
 #import "PostCell.h"
 
@@ -98,6 +99,13 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     return 443;
+}
+
+-(IBAction)btnSearch:(id)sender {
+    
+    SearchViewController* searchViewController = [[SearchViewController alloc] initWithNibName:@"SearchViewController" bundle:nil];
+    
+    [self.navigationController pushViewController:searchViewController animated:YES];
 }
 
 

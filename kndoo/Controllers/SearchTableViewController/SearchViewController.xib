@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController">
             <connections>
+                <outlet property="navigationView" destination="4ag-mn-Mr0" id="1MC-l1-7yE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +19,7 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Of-rV-IRE" userLabel="Bottom menu">
                     <rect key="frame" x="0.0" y="523" width="320" height="45"/>
                     <subviews>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-wK-96b">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-wK-96b" customClass="UIButton">
                             <rect key="frame" x="0.0" y="0.0" width="64" height="45"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="VYf-Tc-drm">
@@ -26,6 +27,9 @@
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.074509803920000006" green="0.074509803920000006" blue="0.074509803920000006" alpha="1" colorSpace="deviceRGB"/>
+                            <connections>
+                                <action selector="btnHome:" destination="-1" eventType="touchUpInside" id="0Q0-Qr-Pet"/>
+                            </connections>
                         </view>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GD7-ad-n1l">
                             <rect key="frame" x="64" y="0.0" width="64" height="45"/>
@@ -85,6 +89,10 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="s8j-FN-XAs">
                     <rect key="frame" x="0.0" y="100" width="320" height="423"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="dRJ-DZ-Xg8"/>
+                        <outlet property="delegate" destination="-1" id="sGl-Yv-yYS"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

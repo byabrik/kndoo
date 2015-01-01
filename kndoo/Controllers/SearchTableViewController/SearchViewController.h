@@ -10,4 +10,6 @@
 
 @interface SearchViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIView *navigationView;
+
 @end

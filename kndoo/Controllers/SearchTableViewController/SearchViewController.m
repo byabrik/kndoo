@@ -7,14 +7,17 @@
 //
 
 #import "SearchViewController.h"
+#import "FeedTableViewController.h"
 #import <stdlib.h>
 #import "Constants.h"
 
-@interface SearchViewController ()
+@interface SearchViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
 @implementation SearchViewController
+
+@synthesize navigationView;
 
 #pragma mark - View's LifeCycle
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -28,6 +31,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBarHidden = YES;
+    self.navigationView.backgroundColor = UIColorFromRGB(0x156097);
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -36,15 +43,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 6;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSArray* colorArray = [NSArray arrayWithObjects:
-                           UIColorFromRGB(0xd75c1c),
-                           UIColorFromRGB(0xd75c1c),
-                           UIColorFromRGB(0xd75c1c),
-                           UIColorFromRGB(0xd75c1c),
-                           UIColorFromRGB(0xd75c1c),
-                           UIColorFromRGB(0xd75c1c),
-                           UIColorFromRGB(0xd75c1c),
+                           UIColorFromRGB(0x6a486b),
+                           UIColorFromRGB(0x24df8e),
+                           UIColorFromRGB(0x6fb7e9),
+                           UIColorFromRGB(0xfacb47),
+                           UIColorFromRGB(0xfb8547),
+                           UIColorFromRGB(0xda2b4a),
                            nil];
     
     // See if there's an existing cell we can reuse
@@ -54,17 +64,29 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CategoryCell"];
         
         // Initialize cell
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleDefault;
         cell.textLabel.textColor = [UIColor whiteColor];
-        int r = arc4random_uniform(6);
-        cell.backgroundColor = colorArray[r];
+        cell.backgroundColor = colorArray[indexPath.row];
     }
     
     cell.textLabel.text = [NSString stringWithFormat:@"Row: %d", indexPath.row];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.imageView.image = [UIImage imageNamed:@"comments_icon.png"];
     
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"didSelectRowAtIndexPath");
+}
+
+-(IBAction)btnHome:(id)sender {
+    
+    FeedTableViewController* feedTableViewController = [[FeedTableViewController alloc] initWithNibName:@"FeedTableViewController" bundle:nil];
+    
+    [self.navigationController pushViewController:feedTableViewController animated:YES];
+}
 
 /*
 #pragma mark - Navigation

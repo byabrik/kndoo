@@ -44,7 +44,7 @@
                     <rect key="frame" x="0.0" y="523" width="320" height="45"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" id="ZY7-Hm-PSM">
+                        <view contentMode="scaleToFill" id="ZY7-Hm-PSM" customClass="UIButton">
                             <rect key="frame" x="0.0" y="0.0" width="64" height="45"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -55,7 +55,7 @@
                             </subviews>
                             <color key="backgroundColor" red="0.074509803921568626" green="0.074509803921568626" blue="0.074509803921568626" alpha="1" colorSpace="deviceRGB"/>
                         </view>
-                        <view contentMode="scaleToFill" id="78i-74-xSy">
+                        <view contentMode="scaleToFill" id="78i-74-xSy" customClass="UIButton">
                             <rect key="frame" x="64" y="0.0" width="64" height="45"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -65,6 +65,9 @@
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="deviceRGB"/>
+                            <connections>
+                                <action selector="btnSearch:" destination="-1" eventType="touchUpInside" id="b5s-Ee-43m"/>
+                            </connections>
                         </view>
                         <view contentMode="scaleToFill" id="FcV-We-HYD">
                             <rect key="frame" x="128" y="0.0" width="64" height="45"/>
