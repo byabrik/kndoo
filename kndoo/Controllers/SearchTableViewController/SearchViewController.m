@@ -10,6 +10,7 @@
 #import "FeedTableViewController.h"
 #import <stdlib.h>
 #import "Constants.h"
+#import "Utils.h"
 
 @interface SearchViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -24,7 +25,10 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        UIImage* image = [Utils imageWithImage:[UIImage imageNamed:@"search_icon.png"] scaledToSize:CGSizeMake(20, 20)];
+        self.tabBarItem.selectedImage = image;
+        self.tabBarItem.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
     }
     return self;
 }
@@ -32,10 +36,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self doInitialSetup];
+}
+
+-(void)doInitialSetup {
     self.navigationController.navigationBarHidden = YES;
     self.navigationView.backgroundColor = UIColorFromRGB(0x156097);
-    
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {

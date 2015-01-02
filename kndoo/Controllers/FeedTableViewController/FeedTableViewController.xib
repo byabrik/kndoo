@@ -40,71 +40,6 @@
                         </imageView>
                     </subviews>
                 </view>
-                <view contentMode="scaleToFill" id="sWL-ab-DFK" userLabel="Bottom menu">
-                    <rect key="frame" x="0.0" y="523" width="320" height="45"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" id="ZY7-Hm-PSM" customClass="UIButton">
-                            <rect key="frame" x="0.0" y="0.0" width="64" height="45"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon.png" id="mcS-48-6hK">
-                                    <rect key="frame" x="19" y="11" width="26" height="24"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </imageView>
-                            </subviews>
-                            <color key="backgroundColor" red="0.074509803921568626" green="0.074509803921568626" blue="0.074509803921568626" alpha="1" colorSpace="deviceRGB"/>
-                        </view>
-                        <view contentMode="scaleToFill" id="78i-74-xSy" customClass="UIButton">
-                            <rect key="frame" x="64" y="0.0" width="64" height="45"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_icon.png" id="soL-U3-dIu">
-                                    <rect key="frame" x="19" y="11" width="26" height="24"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </imageView>
-                            </subviews>
-                            <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="deviceRGB"/>
-                            <connections>
-                                <action selector="btnSearch:" destination="-1" eventType="touchUpInside" id="b5s-Ee-43m"/>
-                            </connections>
-                        </view>
-                        <view contentMode="scaleToFill" id="FcV-We-HYD">
-                            <rect key="frame" x="128" y="0.0" width="64" height="45"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videocam_icon.png" id="54y-mi-yUw">
-                                    <rect key="frame" x="14" y="11" width="35" height="24"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </imageView>
-                            </subviews>
-                            <color key="backgroundColor" red="0.078431372549019607" green="0.45882352941176469" blue="0.6588235294117647" alpha="1" colorSpace="deviceRGB"/>
-                        </view>
-                        <view contentMode="scaleToFill" id="TZb-g3-gq6">
-                            <rect key="frame" x="192" y="0.0" width="64" height="45"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notification_icon.png" id="HwD-qD-Xp5">
-                                    <rect key="frame" x="19" y="11" width="26" height="24"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </imageView>
-                            </subviews>
-                            <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="deviceRGB"/>
-                        </view>
-                        <view contentMode="scaleToFill" id="u9b-ge-31k">
-                            <rect key="frame" x="256" y="0.0" width="64" height="45"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_icon.png" id="JBM-EI-udh">
-                                    <rect key="frame" x="19" y="11" width="26" height="24"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </imageView>
-                            </subviews>
-                            <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="deviceRGB"/>
-                        </view>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="238" y="379"/>
@@ -112,12 +47,7 @@
     </objects>
     <resources>
         <image name="doSomething.jpg" width="237" height="57"/>
-        <image name="home_icon.png" width="26" height="24"/>
         <image name="ios.jpg" width="640" height="1136"/>
-        <image name="notification_icon.png" width="24" height="26"/>
-        <image name="profile_icon.png" width="26" height="26"/>
-        <image name="search_icon.png" width="26" height="26"/>
-        <image name="videocam_icon.png" width="42" height="28"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

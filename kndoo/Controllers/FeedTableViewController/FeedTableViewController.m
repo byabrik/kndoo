@@ -10,6 +10,7 @@
 #import "SearchViewController.h"
 #import "Constants.h"
 #import "PostCell.h"
+#import "Utils.h"
 
 @interface FeedTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -24,11 +25,14 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        //set the image icon for the tab
+        UIImage* image = [Utils imageWithImage:[UIImage imageNamed:@"home_icon.png"] scaledToSize:CGSizeMake(20, 20)];
+        self.tabBarItem.selectedImage = image;
+        self.tabBarItem.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
     }
     return self;
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];

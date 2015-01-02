@@ -16,60 +16,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Of-rV-IRE" userLabel="Bottom menu">
-                    <rect key="frame" x="0.0" y="523" width="320" height="45"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-wK-96b" customClass="UIButton">
-                            <rect key="frame" x="0.0" y="0.0" width="64" height="45"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="VYf-Tc-drm">
-                                    <rect key="frame" x="19" y="11" width="26" height="24"/>
-                                </imageView>
-                            </subviews>
-                            <color key="backgroundColor" red="0.074509803920000006" green="0.074509803920000006" blue="0.074509803920000006" alpha="1" colorSpace="deviceRGB"/>
-                            <connections>
-                                <action selector="btnHome:" destination="-1" eventType="touchUpInside" id="0Q0-Qr-Pet"/>
-                            </connections>
-                        </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GD7-ad-n1l">
-                            <rect key="frame" x="64" y="0.0" width="64" height="45"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="search_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="tGU-un-ijx">
-                                    <rect key="frame" x="19" y="11" width="26" height="24"/>
-                                </imageView>
-                            </subviews>
-                            <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="deviceRGB"/>
-                        </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OQW-Xr-0Gk">
-                            <rect key="frame" x="128" y="0.0" width="64" height="45"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="videocam_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="5jx-FN-xV5">
-                                    <rect key="frame" x="14" y="11" width="35" height="24"/>
-                                </imageView>
-                            </subviews>
-                            <color key="backgroundColor" red="0.078431372550000003" green="0.45882352939999999" blue="0.6588235294" alpha="1" colorSpace="deviceRGB"/>
-                        </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ivY-Wu-oEl">
-                            <rect key="frame" x="192" y="0.0" width="64" height="45"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notification_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zx2-cb-9sx">
-                                    <rect key="frame" x="19" y="11" width="26" height="24"/>
-                                </imageView>
-                            </subviews>
-                            <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="deviceRGB"/>
-                        </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IjH-Wk-zRF">
-                            <rect key="frame" x="256" y="0.0" width="64" height="45"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="JsD-tC-9vK">
-                                    <rect key="frame" x="19" y="11" width="26" height="24"/>
-                                </imageView>
-                            </subviews>
-                            <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="deviceRGB"/>
-                        </view>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ag-mn-Mr0" userLabel="Navigation View">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
                     <subviews>
@@ -101,12 +47,7 @@
     </objects>
     <resources>
         <image name="doSomething.jpg" width="237" height="57"/>
-        <image name="home_icon.png" width="26" height="24"/>
         <image name="ios.jpg" width="640" height="1136"/>
-        <image name="notification_icon.png" width="24" height="26"/>
-        <image name="profile_icon.png" width="26" height="26"/>
-        <image name="search_icon.png" width="26" height="26"/>
-        <image name="videocam_icon.png" width="42" height="28"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

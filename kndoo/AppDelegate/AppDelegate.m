@@ -8,7 +8,17 @@
 
 #import "AppDelegate.h"
 #import "FeedTableViewController.h"
+#import "SearchViewController.h"
 #import "Constants.h"
+#import "Utils.h"
+#import "NotificationViewController.h"
+#import "TakeVideoViewController.h"
+#import "ProfileViewController.h"
+
+
+@interface AppDelegate () <UIApplicationDelegate>
+
+@end
 
 @implementation AppDelegate
 
@@ -26,13 +36,49 @@
 
 -(void)openInitialScreen {
     
+    // View Controllers for tabController (one viewController per tab)
+    NSMutableArray *viewControllers = [[NSMutableArray alloc] init];
+    
+    // first tab has view controller in navigation controller
     FeedTableViewController* feedTableViewController = [[FeedTableViewController alloc] initWithNibName:@"FeedTableViewController" bundle:nil];
+    UINavigationController *feedNavController = [[UINavigationController alloc] initWithRootViewController:feedTableViewController];
+    [viewControllers addObject:feedNavController];
     
-    navigationController = [[UINavigationController alloc] initWithRootViewController:feedTableViewController];
+    SearchViewController *searchViewController = [[SearchViewController alloc] initWithNibName:@"SearchViewController" bundle:nil];
+    UINavigationController *searchNavController = [[UINavigationController alloc] initWithRootViewController:searchViewController];
+    [viewControllers addObject:searchNavController];
     
-    //[[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x1475a8)];
+    TakeVideoViewController *takeVideoViewController = [[TakeVideoViewController alloc] initWithNibName:@"TakeVideoViewController" bundle:nil];
+    UINavigationController *videoNavController = [[UINavigationController alloc] initWithRootViewController:takeVideoViewController];
+    [viewControllers addObject:videoNavController];
     
-    [self.window setRootViewController:navigationController];
+    NotificationViewController *notificationViewController = [[NotificationViewController alloc] initWithNibName:@"NotificationViewController" bundle:nil];
+    UINavigationController *notificationNavController = [[UINavigationController alloc] initWithRootViewController:notificationViewController];
+    [viewControllers addObject:notificationNavController];
+    
+    ProfileViewController *profileViewController = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
+    UINavigationController *profileNavController = [[UINavigationController alloc] initWithRootViewController:profileViewController];
+    [viewControllers addObject:profileNavController];
+    
+    // create the tab controller and add the view controllers
+    UITabBarController *tabController = [[UITabBarController alloc] init];
+    [tabController setViewControllers:viewControllers];
+    
+    // Add background color to middle tabBarItem
+    UIColor* bgColor = UIColorFromRGB(0x1475a8);
+    UIView* bgView = [[UIView alloc] initWithFrame:CGRectMake(128,0,64,48)];
+    bgView.backgroundColor = bgColor;
+    [tabController.tabBar insertSubview:bgView atIndex:0];
+    
+    
+    [[UITabBar appearance] setBarTintColor:UIColorFromRGB(0x282828)];
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UITabBar appearance] setSelectionIndicatorImage:[Utils imageFromColor:UIColorFromRGB(0x131313) forSize:CGSizeMake(64, 49) withCornerRadius:0]];
+    
+    self.window.rootViewController = tabController;
+    
+    // add tabbar and show
+    [[self window] addSubview:[tabController view]];
     [self.window makeKeyAndVisible];
 
 }

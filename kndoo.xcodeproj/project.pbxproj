@@ -14,6 +14,13 @@
 		8498B0581A51D9D400247996 /* doSomething.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8498B0571A51D9D400247996 /* doSomething.jpg */; };
 		8498B05C1A51DEBC00247996 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498B05B1A51DEBC00247996 /* PostCell.m */; };
 		8498B05E1A51DEE000247996 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8498B05D1A51DEE000247996 /* PostCell.xib */; };
+		849CB8FD1A56D0A0007C3B03 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 849CB8FC1A56D0A0007C3B03 /* Utils.m */; };
+		849CB9041A56D34E007C3B03 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849CB9021A56D34E007C3B03 /* NotificationViewController.m */; };
+		849CB9051A56D34E007C3B03 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849CB9031A56D34E007C3B03 /* NotificationViewController.xib */; };
+		849CB9091A56D416007C3B03 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849CB9071A56D416007C3B03 /* ProfileViewController.m */; };
+		849CB90A1A56D416007C3B03 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849CB9081A56D416007C3B03 /* ProfileViewController.xib */; };
+		849CB90E1A56D45F007C3B03 /* TakeVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849CB90C1A56D45F007C3B03 /* TakeVideoViewController.m */; };
+		849CB90F1A56D45F007C3B03 /* TakeVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849CB90D1A56D45F007C3B03 /* TakeVideoViewController.xib */; };
 		84EE0E871A509C8900E2CB45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE0E861A509C8900E2CB45 /* main.m */; };
 		84EE0EA11A509C8900E2CB45 /* kndooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE0EA01A509C8900E2CB45 /* kndooTests.m */; };
 		84EE0EB41A50A0D300E2CB45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE0EB31A50A0D300E2CB45 /* AppDelegate.m */; };
@@ -60,6 +67,17 @@
 		8498B05A1A51DEBC00247996 /* PostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		8498B05B1A51DEBC00247996 /* PostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
 		8498B05D1A51DEE000247996 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		849CB8FB1A56D0A0007C3B03 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		849CB8FC1A56D0A0007C3B03 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		849CB9011A56D34E007C3B03 /* NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
+		849CB9021A56D34E007C3B03 /* NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
+		849CB9031A56D34E007C3B03 /* NotificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
+		849CB9061A56D416007C3B03 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		849CB9071A56D416007C3B03 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		849CB9081A56D416007C3B03 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		849CB90B1A56D45F007C3B03 /* TakeVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakeVideoViewController.h; sourceTree = "<group>"; };
+		849CB90C1A56D45F007C3B03 /* TakeVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakeVideoViewController.m; sourceTree = "<group>"; };
+		849CB90D1A56D45F007C3B03 /* TakeVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TakeVideoViewController.xib; sourceTree = "<group>"; };
 		84EE0E811A509C8800E2CB45 /* kndoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kndoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EE0E851A509C8900E2CB45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84EE0E861A509C8900E2CB45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -129,6 +147,45 @@
 				8498B05D1A51DEE000247996 /* PostCell.xib */,
 			);
 			path = PostCell;
+			sourceTree = "<group>";
+		};
+		849CB8FA1A56D060007C3B03 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				849CB8FB1A56D0A0007C3B03 /* Utils.h */,
+				849CB8FC1A56D0A0007C3B03 /* Utils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		849CB8FE1A56D2EE007C3B03 /* NotificationsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				849CB9011A56D34E007C3B03 /* NotificationViewController.h */,
+				849CB9021A56D34E007C3B03 /* NotificationViewController.m */,
+				849CB9031A56D34E007C3B03 /* NotificationViewController.xib */,
+			);
+			path = NotificationsViewController;
+			sourceTree = "<group>";
+		};
+		849CB8FF1A56D2EE007C3B03 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				849CB9061A56D416007C3B03 /* ProfileViewController.h */,
+				849CB9071A56D416007C3B03 /* ProfileViewController.m */,
+				849CB9081A56D416007C3B03 /* ProfileViewController.xib */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		849CB9001A56D2EE007C3B03 /* TakeVideoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				849CB90B1A56D45F007C3B03 /* TakeVideoViewController.h */,
+				849CB90C1A56D45F007C3B03 /* TakeVideoViewController.m */,
+				849CB90D1A56D45F007C3B03 /* TakeVideoViewController.xib */,
+			);
+			path = TakeVideoViewController;
 			sourceTree = "<group>";
 		};
 		84EE0E781A509C8800E2CB45 = {
@@ -201,6 +258,9 @@
 		84EE0EAE1A509DED00E2CB45 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				849CB8FE1A56D2EE007C3B03 /* NotificationsViewController */,
+				849CB8FF1A56D2EE007C3B03 /* ProfileViewController */,
+				849CB9001A56D2EE007C3B03 /* TakeVideoViewController */,
 				8497A87D1A55EFC200F09F04 /* SearchTableViewController */,
 				84EE0EB51A50A0DD00E2CB45 /* FeedTableViewController */,
 			);
@@ -256,6 +316,7 @@
 		84EE0EC81A50BFDE00E2CB45 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				849CB8FA1A56D060007C3B03 /* Utils */,
 				84EE0EC91A50BFDE00E2CB45 /* Constants */,
 			);
 			path = Helpers;
@@ -358,6 +419,7 @@
 				8498B0581A51D9D400247996 /* doSomething.jpg in Resources */,
 				84EE0EDD1A50C11500E2CB45 /* favorite_icon.png in Resources */,
 				84EE0EE21A50C11500E2CB45 /* more_icon@2x.png in Resources */,
+				849CB90A1A56D416007C3B03 /* ProfileViewController.xib in Resources */,
 				8498B05E1A51DEE000247996 /* PostCell.xib in Resources */,
 				84EE0EE01A50C11500E2CB45 /* home_icon@2x.png in Resources */,
 				84EE0EC61A50BD0B00E2CB45 /* ios.jpg in Resources */,
@@ -371,9 +433,11 @@
 				8497A87A1A55D76700F09F04 /* videoPic.jpg in Resources */,
 				84EE0EE91A50C11500E2CB45 /* videocam_icon.png in Resources */,
 				84EE0EE41A50C11500E2CB45 /* notification_icon@2x.png in Resources */,
+				849CB90F1A56D45F007C3B03 /* TakeVideoViewController.xib in Resources */,
 				8497A87C1A55D7EE00F09F04 /* userPic.jpg in Resources */,
 				84EE0EE51A50C11500E2CB45 /* profile_icon.png in Resources */,
 				84EE0EBD1A50A8E700E2CB45 /* Main.storyboard in Resources */,
+				849CB9051A56D34E007C3B03 /* NotificationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,9 +455,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849CB9041A56D34E007C3B03 /* NotificationViewController.m in Sources */,
 				84EE0EB41A50A0D300E2CB45 /* AppDelegate.m in Sources */,
+				849CB9091A56D416007C3B03 /* ProfileViewController.m in Sources */,
 				84EE0E871A509C8900E2CB45 /* main.m in Sources */,
 				8497A8811A55F03000F09F04 /* SearchViewController.m in Sources */,
+				849CB90E1A56D45F007C3B03 /* TakeVideoViewController.m in Sources */,
+				849CB8FD1A56D0A0007C3B03 /* Utils.m in Sources */,
 				84EE0EB81A50A0DD00E2CB45 /* FeedTableViewController.m in Sources */,
 				8498B05C1A51DEBC00247996 /* PostCell.m in Sources */,
 			);
