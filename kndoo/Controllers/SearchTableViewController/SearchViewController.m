@@ -75,7 +75,7 @@
         cell.backgroundColor = colorArray[indexPath.row];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Row: %d", indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"Row: %ld", (long)indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.imageView.image = [UIImage imageNamed:@"comments_icon.png"];
     

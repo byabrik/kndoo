@@ -10,4 +10,6 @@
 
 @interface TakeVideoViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIView *navigationView;
+
 @end

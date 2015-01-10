@@ -50,6 +50,7 @@
     
     TakeVideoViewController *takeVideoViewController = [[TakeVideoViewController alloc] initWithNibName:@"TakeVideoViewController" bundle:nil];
     UINavigationController *videoNavController = [[UINavigationController alloc] initWithRootViewController:takeVideoViewController];
+    videoNavController.navigationBarHidden = YES;
     [viewControllers addObject:videoNavController];
     
     NotificationViewController *notificationViewController = [[NotificationViewController alloc] initWithNibName:@"NotificationViewController" bundle:nil];

@@ -12,14 +12,21 @@
 
 @interface TakeVideoViewController ()
 
+@property (nonatomic) BOOL isRecording;
+
 @end
 
 @implementation TakeVideoViewController
+
+@synthesize navigationView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
+        self.hidesBottomBarWhenPushed = YES;
+        
         UIImage* image = [Utils imageWithImage:[UIImage imageNamed:@"videocam_icon.png"] scaledToSize:CGSizeMake(35, 20)];
         self.tabBarItem.selectedImage = image;
         self.tabBarItem.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -28,14 +35,47 @@
     return self;
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self doInitialSetup];
+}
+
+- (void) doInitialSetup {
+    
+    self.isRecording = NO;
+    
+    UIView* progressView = [[UIView alloc] init];
+    progressView.backgroundColor = [UIColor whiteColor];
+    
+    progressView.frame= CGRectMake(0,0,0,44);
+    [navigationView insertSubview:progressView atIndex:0];
+    
+    CGRect frame = progressView.frame;
+    frame.size.width = 100;
+    [UIView animateWithDuration:5
+                     animations:^{
+                         progressView.frame= frame;
+                     }];
+}
+
+- (IBAction)toggleRecordButton:(id)sender {
+    
+    if(!self.isRecording) {
+        
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    
+    //self.navigationController.navigationBarHidden = YES;
     // Dispose of any resources that can be recreated.
 }
 
