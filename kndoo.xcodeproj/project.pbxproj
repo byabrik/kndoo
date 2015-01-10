@@ -14,6 +14,7 @@
 		8498B0581A51D9D400247996 /* doSomething.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8498B0571A51D9D400247996 /* doSomething.jpg */; };
 		8498B05C1A51DEBC00247996 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498B05B1A51DEBC00247996 /* PostCell.m */; };
 		8498B05E1A51DEE000247996 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8498B05D1A51DEE000247996 /* PostCell.xib */; };
+		8499B0AE1A6180F3004787A7 /* PreviewVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499B0AD1A6180F3004787A7 /* PreviewVIew.m */; };
 		849CB8FD1A56D0A0007C3B03 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 849CB8FC1A56D0A0007C3B03 /* Utils.m */; };
 		849CB9041A56D34E007C3B03 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849CB9021A56D34E007C3B03 /* NotificationViewController.m */; };
 		849CB9051A56D34E007C3B03 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849CB9031A56D34E007C3B03 /* NotificationViewController.xib */; };
@@ -57,6 +58,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8499B0AA1A617EB8004787A7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8497A8791A55D76700F09F04 /* videoPic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = videoPic.jpg; sourceTree = "<group>"; };
 		8497A87B1A55D7EE00F09F04 /* userPic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = userPic.jpg; sourceTree = "<group>"; };
@@ -67,6 +81,8 @@
 		8498B05A1A51DEBC00247996 /* PostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		8498B05B1A51DEBC00247996 /* PostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
 		8498B05D1A51DEE000247996 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		8499B0AC1A6180F3004787A7 /* PreviewVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewVIew.h; sourceTree = "<group>"; };
+		8499B0AD1A6180F3004787A7 /* PreviewVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewVIew.m; sourceTree = "<group>"; };
 		849CB8FB1A56D0A0007C3B03 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		849CB8FC1A56D0A0007C3B03 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		849CB9011A56D34E007C3B03 /* NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
@@ -149,6 +165,15 @@
 			path = PostCell;
 			sourceTree = "<group>";
 		};
+		8499B0AB1A6180CC004787A7 /* PreviewView */ = {
+			isa = PBXGroup;
+			children = (
+				8499B0AC1A6180F3004787A7 /* PreviewVIew.h */,
+				8499B0AD1A6180F3004787A7 /* PreviewVIew.m */,
+			);
+			path = PreviewView;
+			sourceTree = "<group>";
+		};
 		849CB8FA1A56D060007C3B03 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +206,7 @@
 		849CB9001A56D2EE007C3B03 /* TakeVideoViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8499B0AB1A6180CC004787A7 /* PreviewView */,
 				849CB90B1A56D45F007C3B03 /* TakeVideoViewController.h */,
 				849CB90C1A56D45F007C3B03 /* TakeVideoViewController.m */,
 				849CB90D1A56D45F007C3B03 /* TakeVideoViewController.xib */,
@@ -340,6 +366,7 @@
 				84EE0E7D1A509C8800E2CB45 /* Sources */,
 				84EE0E7E1A509C8800E2CB45 /* Frameworks */,
 				84EE0E7F1A509C8800E2CB45 /* Resources */,
+				8499B0AA1A617EB8004787A7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -460,6 +487,7 @@
 				849CB9091A56D416007C3B03 /* ProfileViewController.m in Sources */,
 				84EE0E871A509C8900E2CB45 /* main.m in Sources */,
 				8497A8811A55F03000F09F04 /* SearchViewController.m in Sources */,
+				8499B0AE1A6180F3004787A7 /* PreviewVIew.m in Sources */,
 				849CB90E1A56D45F007C3B03 /* TakeVideoViewController.m in Sources */,
 				849CB8FD1A56D0A0007C3B03 /* Utils.m in Sources */,
 				84EE0EB81A50A0DD00E2CB45 /* FeedTableViewController.m in Sources */,

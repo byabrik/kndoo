@@ -9,10 +9,37 @@
 #import "TakeVideoViewController.h"
 #import "Utils.h"
 #import "Constants.h"
+#import <AVFoundation/AVFoundation.h>
+#import "PreviewView.h"
 
-@interface TakeVideoViewController ()
 
-@property (nonatomic) BOOL isRecording;
+static void * CapturingStillImageContext = &CapturingStillImageContext;
+static void * RecordingContext = &RecordingContext;
+static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDeviceAuthorizedContext;
+
+@interface TakeVideoViewController () <AVCaptureFileOutputRecordingDelegate>
+
+// For use in the storyboards.
+@property (nonatomic, weak) IBOutlet PreviewView *previewView;
+@property (nonatomic, weak) IBOutlet UIButton *recordButton;
+@property (nonatomic, weak) IBOutlet UIButton *cameraButton;
+
+- (IBAction)toggleMovieRecording:(id)sender;
+- (IBAction)changeCamera:(id)sender;
+- (IBAction)focusAndExposeTap:(UIGestureRecognizer *)gestureRecognizer;
+
+// Session management.
+@property (nonatomic) dispatch_queue_t sessionQueue; // Communicate with the session and other session objects on this queue.
+@property (nonatomic) AVCaptureSession *session;
+@property (nonatomic) AVCaptureDeviceInput *videoDeviceInput;
+@property (nonatomic) AVCaptureMovieFileOutput *movieFileOutput;
+
+// Utilities.
+@property (nonatomic) UIBackgroundTaskIdentifier backgroundRecordingID;
+@property (nonatomic, getter = isDeviceAuthorized) BOOL deviceAuthorized;
+@property (nonatomic, readonly, getter = isSessionRunningAndDeviceAuthorized) BOOL sessionRunningAndDeviceAuthorized;
+@property (nonatomic) BOOL lockInterfaceRotation;
+@property (nonatomic) id runtimeErrorHandlingObserver;
 
 @end
 
@@ -48,20 +75,23 @@
 
 - (void) doInitialSetup {
     
-    self.isRecording = NO;
+    // Create the AVCaptureSession
+    AVCaptureSession *session = [[AVCaptureSession alloc] init];
+    [self setSession:session];
+
     
-    UIView* progressView = [[UIView alloc] init];
-    progressView.backgroundColor = [UIColor whiteColor];
-    
-    progressView.frame= CGRectMake(0,0,0,44);
-    [navigationView insertSubview:progressView atIndex:0];
-    
-    CGRect frame = progressView.frame;
-    frame.size.width = 100;
-    [UIView animateWithDuration:5
-                     animations:^{
-                         progressView.frame= frame;
-                     }];
+//    UIView* progressView = [[UIView alloc] init];
+//    progressView.backgroundColor = [UIColor whiteColor];
+//    
+//    progressView.frame= CGRectMake(0,0,0,44);
+//    [navigationView insertSubview:progressView atIndex:0];
+//    
+//    CGRect frame = progressView.frame;
+//    frame.size.width = 100;
+//    [UIView animateWithDuration:5
+//                     animations:^{
+//                         progressView.frame= frame;
+//                     }];
 }
 
 - (IBAction)toggleRecordButton:(id)sender {
